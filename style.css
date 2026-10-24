@@ -815,9 +815,11 @@ h1, h2, h3, h4 {
 .plan-desc {
   font-size: 0.925rem;
   color: var(--gray-500);
-  line-height: 1.6;
+  line-height: 1.65;
   margin-bottom: 1.25rem;
   flex-grow: 1;
+  word-break: break-word;
+  overflow-wrap: anywhere;
 }
 
 .plan-features {
@@ -849,19 +851,32 @@ h1, h2, h3, h4 {
   align-items: center;
   justify-content: space-between;
   width: 100%;
-  padding: 0.75rem 1rem;
+  padding: 0.85rem 1.15rem;
   background-color: var(--soft-blue-light);
   color: var(--primary-deep);
   font-weight: 600;
   font-size: 0.925rem;
   border-radius: var(--radius-sm);
   transition: var(--transition-base);
+  box-sizing: border-box;
 }
 
 .plan-link:hover {
-  background-color: var(--primary-deep);
+  background-color: var(--whatsapp-color);
   color: var(--white);
-  padding-right: 1.25rem;
+  padding-right: 1.35rem;
+  box-shadow: 0 4px 12px rgba(37, 211, 102, 0.35);
+}
+
+.plan-link .plan-icon {
+  font-size: 1.15rem;
+  color: var(--whatsapp-color);
+  transition: transform var(--transition-fast), color var(--transition-fast);
+}
+
+.plan-link:hover .plan-icon {
+  color: var(--white);
+  transform: scale(1.18);
 }
 
 /* Filtering animation helper */
